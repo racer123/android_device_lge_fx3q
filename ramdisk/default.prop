@@ -1,0 +1,16 @@
+#
+# ADDITIONAL_DEFAULT_PROPERTIES
+#
+ro.allow.mock.location=0
+persist.sys.usb.config=boot
+
+# Since Android 4.2.2, USB debugging requires authentication, something that is not possible during boot. 
+# To disable this, set the following property in default.prop (inside initrd):
+ro.adb.secure=0
+
+# To get root access this is a must:
+ro.secure=0
+
+# will allow you to run adbd as root via the adb root command:
+ro.debuggable=1
+service.adb.root=1
